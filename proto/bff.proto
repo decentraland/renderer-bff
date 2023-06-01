@@ -13,7 +13,6 @@ message Entity {
   float timestamp = 4;
   repeated string pointers = 5;
   repeated EntityContent content = 6;
-  // TODO_OBJECT_MAPPING metadata = 450004177;
 }
 
 message Entities {
