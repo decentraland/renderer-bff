@@ -5,11 +5,14 @@
     "lint:check": "eslint '**/*.{js,ts}'",
     "lint:fix": "eslint '**/*.{js,ts}' --fix",
     "start": "node --trace-warnings --abort-on-uncaught-exception --unhandled-rejections=strict dist/index.js",
-    "test": "jest --forceExit --detectOpenHandles --coverage --verbose"
+    "test": "jest --forceExit --detectOpenHandles --coverage --verbose",
+    "api2proto": "npx @openapitools/openapi-generator-cli generate -i node_modules/@dcl/catalyst-api-specs/lib/api.yaml -g protobuf-schema -o proto"
   },
   "license": "Apache-2.0",
   "devDependencies": {
+    "@dcl/catalyst-api-specs": "^3.2.0",
     "@dcl/eslint-config": "^1.1.2",
+    "@openapitools/openapi-generator-cli": "^2.6.0",
     "@types/node": "^20.2.5",
     "@well-known-components/test-helpers": "^1.5.0",
     "typescript": "^5.0.4"
