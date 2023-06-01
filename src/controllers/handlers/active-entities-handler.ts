@@ -1,12 +1,11 @@
 import { getContentClient, encode } from '../../logic/utils'
-import { Entities } from '../../proto/entity'
-import { HandlerContextWithPath, InvalidRequestError } from '../../types'
-
-const acceptJson = false
+import { Entities } from '../../proto/bff'
+import { ACCEPT_JSON, HandlerContextWithPath, InvalidRequestError } from '../../types'
 
 export async function activeEntitiesHandler(context: HandlerContextWithPath<'fetch', '/content/active/entities'>) {
   const {
-    components: { fetch }
+    components: { fetch },
+    mediaType
   } = context
 
   const body = await context.request.json()
@@ -26,18 +25,16 @@ export async function activeEntitiesHandler(context: HandlerContextWithPath<'fet
 
   const entities = await (idsPresent ? client.fetchEntitiesByIds(ids) : client.fetchEntitiesByPointers(pointers))
 
-  console.log(context.request.headers)
-
-  if (!acceptJson) {
+  if (mediaType === ACCEPT_JSON) {
     return {
-      headers: {
-        'Content-Type': 'application/x-protobuf'
-      },
-      body: encode<Entities>(Entities.encode, { entities })
+      body: entities
     }
   }
 
   return {
-    body: entities
+    headers: {
+      'Content-Type': 'application/x-protobuf'
+    },
+    body: encode<Entities>(Entities.encode, { entities })
   }
 }

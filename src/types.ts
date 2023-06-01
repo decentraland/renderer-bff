@@ -10,6 +10,7 @@ import { metricDeclarations } from './metrics'
 
 export type GlobalContext = {
   components: BaseComponents
+  mediaType: string
 }
 
 // components used in every environment
@@ -39,6 +40,7 @@ export type HandlerContextWithPath<
 > = IHttpServerComponent.PathAwareContext<
   IHttpServerComponent.DefaultContext<{
     components: Pick<AppComponents, ComponentNames>
+    mediaType: string
   }>,
   Path
 >
@@ -58,3 +60,6 @@ export class NotFoundError extends Error {
     Error.captureStackTrace(this, this.constructor)
   }
 }
+
+export const ACCEPT_JSON = 'application/json'
+export const ACCEPT_PROTOBUF = 'application/x-protobuf'

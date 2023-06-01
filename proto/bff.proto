@@ -19,3 +19,7 @@ message Entity {
 message Entities {
   repeated Entity entities = 1;
 }
+
+message Error {
+  string message = 1;
+}
