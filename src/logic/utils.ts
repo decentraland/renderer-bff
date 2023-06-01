@@ -1,3 +1,4 @@
+import { Writer } from 'protobufjs/minimal'
 import { AppComponents } from '../types'
 import { ContentClient, createContentClient } from 'dcl-catalyst-client'
 
@@ -12,4 +13,13 @@ export function getContentClient({ fetch }: Pick<AppComponents, 'fetch'>, url: s
     return defaultClient
   }
   return createContentClient({ url, fetcher: fetch })
+}
+
+// we use a shared writer to reduce allocations and leverage its allocation pool
+const writer = new Writer()
+
+export function encode<T>(encoder: (message: T, writer: Writer) => void, message: T): Uint8Array {
+  writer.reset()
+  encoder(message, writer)
+  return writer.finish()
 }
