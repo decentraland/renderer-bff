@@ -1,5 +1,5 @@
 import { getContentClient, encode } from '../../logic/utils'
-import { Entities } from '../../proto/proto/entity'
+import { Entities } from '../../proto/entity'
 import { HandlerContextWithPath, InvalidRequestError } from '../../types'
 
 const acceptJson = false
