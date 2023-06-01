@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 README.md
 models/about.proto
 models/about_bff.proto
