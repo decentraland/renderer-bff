@@ -1,18 +1,25 @@
 {
-  "name": "template-server",
+  "name": "renderer-bff",
   "scripts": {
     "build": "tsc -p tsconfig.json",
+    "lint:check": "eslint '**/*.{js,ts}'",
+    "lint:fix": "eslint '**/*.{js,ts}' --fix",
     "start": "node --trace-warnings --abort-on-uncaught-exception --unhandled-rejections=strict dist/index.js",
     "test": "jest --forceExit --detectOpenHandles --coverage --verbose"
   },
+  "license": "Apache-2.0",
   "devDependencies": {
+    "@dcl/eslint-config": "^1.1.2",
     "@types/node": "^20.2.5",
     "@well-known-components/test-helpers": "^1.5.0",
     "typescript": "^4.8.3"
   },
   "prettier": {
     "printWidth": 120,
-    "semi": false
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "tabWidth": 2
   },
   "dependencies": {
     "@well-known-components/env-config-provider": "^1.1.1",
