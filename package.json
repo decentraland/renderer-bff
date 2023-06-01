@@ -1,7 +1,8 @@
 {
   "name": "renderer-bff",
   "scripts": {
-    "build": "tsc -p tsconfig.json",
+    "proto": "mkdir -p src/proto && protoc --plugin=./node_modules/.bin/protoc-gen-dcl_ts_proto --ts_proto_out=./src/proto/ -I=./proto ./proto/*.proto",
+    "build": "yarn proto && tsc -p tsconfig.json",
     "lint:check": "eslint '**/*.{js,ts}'",
     "lint:fix": "eslint '**/*.{js,ts}' --fix",
     "start": "node --trace-warnings --abort-on-uncaught-exception --unhandled-rejections=strict dist/index.js",
@@ -12,6 +13,7 @@
     "@dcl/eslint-config": "^1.1.2",
     "@types/node": "^20.2.5",
     "@well-known-components/test-helpers": "^1.5.0",
+    "ts-proto": "^1.148.1",
     "typescript": "^5.0.4"
   },
   "prettier": {
@@ -22,10 +24,14 @@
     "tabWidth": 2
   },
   "dependencies": {
+    "@hapi/accept": "^6.0.1",
+    "@protobuf-ts/protoc": "^2.9.0",
     "@well-known-components/env-config-provider": "^1.1.1",
+    "@well-known-components/fetch-component": "^2.0.0",
     "@well-known-components/http-server": "^1.1.6-20220927190058.commit-2dfb235",
     "@well-known-components/interfaces": "^1.4.1",
     "@well-known-components/logger": "^3.1.2",
-    "@well-known-components/metrics": "^2.0.1-20220909150423.commit-8f7e5bc"
+    "@well-known-components/metrics": "^2.0.1-20220909150423.commit-8f7e5bc",
+    "dcl-catalyst-client": "^19.0.0"
   }
 }

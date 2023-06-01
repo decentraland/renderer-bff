@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+message EntityContent {
+  string file = 1;
+  string hash = 2;
+
+}
+
+message Entity {
+  string version = 1;
+  string id = 2;
+  string type = 3;
+  float timestamp = 4;
+  repeated string pointers = 5;
+  repeated EntityContent content = 6;
+}
+
+message Entities {
+  repeated Entity entities = 1;
+}
+
+message Error {
+  string message = 1;
+}
