@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@hapi/accept": "^6.0.1",
+    "@protobuf-ts/protoc": "^2.9.0",
     "@well-known-components/env-config-provider": "^1.1.1",
     "@well-known-components/fetch-component": "^2.0.0",
     "@well-known-components/http-server": "^1.1.6-20220927190058.commit-2dfb235",
