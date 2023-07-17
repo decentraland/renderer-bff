@@ -338,19 +338,19 @@
     ipfs-unixfs-importer "^7.0.3"
     multiformats "^9.6.3"
 
-"@dcl/schemas@^7.1.0":
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/@dcl/schemas/-/schemas-7.2.0.tgz#385df4d91c18783884dcf3d4f12a112f65f0db58"
-  integrity sha512-oULCVSczP5bhfur95aWJ8iKVHl4gLH8++8CMyncTVKAeFhAjPLTE8lqpZmGPPkhd05/Crw/WALXT7ghukMlkQg==
+"@dcl/schemas@^7.3.4":
+  version "7.3.4"
+  resolved "https://registry.yarnpkg.com/@dcl/schemas/-/schemas-7.3.4.tgz#cd36308f2045578d5230076452087918afd5680d"
+  integrity sha512-k/N2XmqGV/tAIdr4Ni40LRNE6CV3r9KSd/+4dB0irY4NnhQ1yk1LC9QhLDWXr9Fb15uHJt54ftbFTJwILpzdww==
   dependencies:
     ajv "^8.11.0"
     ajv-errors "^3.0.0"
     ajv-keywords "^5.1.0"
 
-"@dcl/schemas@^7.3.4":
-  version "7.3.4"
-  resolved "https://registry.yarnpkg.com/@dcl/schemas/-/schemas-7.3.4.tgz#cd36308f2045578d5230076452087918afd5680d"
-  integrity sha512-k/N2XmqGV/tAIdr4Ni40LRNE6CV3r9KSd/+4dB0irY4NnhQ1yk1LC9QhLDWXr9Fb15uHJt54ftbFTJwILpzdww==
+"@dcl/schemas@^8.1.0":
+  version "8.2.2"
+  resolved "https://registry.yarnpkg.com/@dcl/schemas/-/schemas-8.2.2.tgz#31b3697ec517d4a5a6958bddf046441a969b8056"
+  integrity sha512-IZqcT1YOKxw5XWs6LW6Uw+7Ue5vHCVERPMwefAdt26jW1OTH818od0rBc1tQzzfBTwsrAvbgFJvpbZedieu00g==
   dependencies:
     ajv "^8.11.0"
     ajv-errors "^3.0.0"
@@ -1830,15 +1830,15 @@ dataloader@^1.4.0:
   resolved "https://registry.yarnpkg.com/dataloader/-/dataloader-1.4.0.tgz#bca11d867f5d3f1b9ed9f737bd15970c65dff5c8"
   integrity sha512-68s5jYdlvasItOJnCuI2Q9s4q98g0pCyL3HrcKJu8KNugUl8ahgmZYg38ysLTgQjjXX3H8CJLkAvWrclWfcalw==
 
-dcl-catalyst-client@^20.0.1:
-  version "20.0.1"
-  resolved "https://registry.yarnpkg.com/dcl-catalyst-client/-/dcl-catalyst-client-20.0.1.tgz#e77cd5eb341eef4d5b8e584767c84ee80c0146f5"
-  integrity sha512-Mih2qeSYbGnNxLwl8x7Jz4+owIjcQYyVhc9As7Z8oAhHDPAMP9BCfnUdnw8Es66aa3J/mAVidsCB/6RxWiHyLg==
+dcl-catalyst-client@^21.5.0:
+  version "21.5.0"
+  resolved "https://registry.yarnpkg.com/dcl-catalyst-client/-/dcl-catalyst-client-21.5.0.tgz#1db1e480501b27d2b3a3c3598e75a627b1022c5d"
+  integrity sha512-bLfovKM/j828q/urvlBAGzPCdBF5JbYQdBqycmAvHFJf8uCGxuP5KABdYxqO4rNz635rJH7RbWdN6vMBuv9ewg==
   dependencies:
     "@dcl/catalyst-contracts" "^4.0.2"
     "@dcl/crypto" "^3.4.0"
     "@dcl/hashing" "^2.0.0"
-    "@dcl/schemas" "^7.1.0"
+    "@dcl/schemas" "^8.1.0"
     "@well-known-components/fetch-component" "^2.0.0"
     cookie "^0.5.0"
     cross-fetch "^3.1.5"
